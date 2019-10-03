@@ -34,8 +34,6 @@ public class LoginActivity extends AppCompatActivity {
                 _dataBase = getInstance(getApplicationContext()).getWritableDatabase();
 
                 if (_dataBase != null) {
-                    Log.e("DB", "DB created");
-
                     try {
                         ContentValues values = new ContentValues();
 
@@ -43,6 +41,12 @@ public class LoginActivity extends AppCompatActivity {
                         values.put("Name", textEmailAddress.getText().toString());
 
                         boolean result = _dataBase.insert("User", null, values) > 0;
+
+                        if(!result)
+                        {
+                            throw new Exception("User not inserted");
+                        }
+
                         _dataBase.close();
 
                     } catch (Exception ex) {

@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.tadoo.ui.LoginActivity;
+import android.tadoo.ui.home.HomeActivity;
 import android.util.Log;
 
 import static android.tadoo.DB.DataBase.getInstance;
@@ -31,6 +32,8 @@ public class LoadingActivity extends AppCompatActivity {
                 while (cursor.moveToNext()){
                     String data = cursor.getString(1);
                     Log.e("LOGIN", data);
+
+                    GoToHomePage();
                 }
                 cursor.close();
             } else {
@@ -41,9 +44,17 @@ public class LoadingActivity extends AppCompatActivity {
         }
     }
 
+    private void GoToHomePage() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void GoToLoginActivity() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 }
