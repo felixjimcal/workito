@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.tadoo.ui.LoginActivity;
-import android.tadoo.ui.home.HomeActivity;
+import android.tadoo.ui.Home.HomeActivity;
 import android.util.Log;
 
 import static android.tadoo.DB.DataBase.getInstance;

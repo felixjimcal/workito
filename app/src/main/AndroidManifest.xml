@@ -11,8 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.User.UserActivity"></activity>
-        <activity android:name=".ui.home.HomeActivity" />
+        <activity android:name=".ui.Auction.AuctionsActivity"></activity>
+        <activity android:name=".ui.User.UserActivity" />
+        <activity android:name=".ui.Home.HomeActivity" />
         <activity android:name=".ui.LoginActivity" />
         <activity
             android:name=".LoadingActivity"

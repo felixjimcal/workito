@@ -1,4 +1,4 @@
-package android.tadoo.ui.User;
+package android.tadoo.ui.Home;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,18 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.tadoo.R;
 import android.tadoo.ui.Auction.AuctionsActivity;
-import android.tadoo.ui.Home.HomeActivity;
+import android.tadoo.ui.User.UserActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class UserActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
+        setContentView(R.layout.activity_home);
 
         BottomNavBarActions();
     }
@@ -27,7 +27,7 @@ public class UserActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
 
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(2);
+        MenuItem menuItem = menu.getItem(0);
         menuItem.setChecked(true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
